@@ -19,3 +19,11 @@ by user manually by going through the python code.
 Thank You.
 
 -----------------------------------------------------------------------------------------
+
+**How to Install:**
+<br />
+* use these commands in terminal:
+<br />`git clone https://github.com/RohanKP1/minifetch.git`
+<br />`cd minifetch/`
+<br />`sh install.sh`
+
