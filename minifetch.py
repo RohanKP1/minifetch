@@ -1,0 +1,15 @@
+import subprocess
+import platform
+import os
+CRED , CEND , CBLU , CGRE , CYAN = '\033[91m' , '\033[0m' , '\033[94m' , '\033[92m' , '\033[96m'
+bslash="\\"
+uptime=os.popen('uptime -p').read()[:-1].split("up")[1]
+mem=subprocess.check_output("free -h",shell=True,text=True).split("\n")[1].split(" ")
+pkgs=subprocess.check_output('yay -Q | wc -l',shell=True,text=True)
+subprocess.run(["echo",f"""                    {CYAN+"╭────────────"+CEND}
+         {CGRE+"/"+bslash+CEND}         {CYAN+"│"+CEND} {CBLU+"OS"+CEND}› Arch Linux
+        {CGRE+"/  "+bslash+CEND}        {CYAN+"│"+CEND} {CBLU+"Kernel"+CEND}› {platform.release()}
+       {CBLU+"/ /"+bslash+" "+bslash+CEND}       {CYAN+"│"+CEND} {CBLU+"Packages"+CEND}› {int(pkgs)}
+      {CBLU+"/ /  "+bslash+" "+bslash+CEND}      {CYAN+"│"+CEND} {CBLU+"Memory"+CEND}› {mem[18]}/{mem[11]}
+     {CBLU+"/_/    "+bslash+"_"+bslash+CEND}     {CYAN+"│"+CEND} {CBLU+"Uptime"+CEND}›{uptime}
+                    {CYAN+"╰────────────"+CEND}                     """])
