@@ -1,4 +1,6 @@
 # minifetch
+[![miinifetch.png](https://i.postimg.cc/nrkkqqgw/miinifetch.png)](https://postimg.cc/D4SLT42q)
+
 
 A very small (15 lines of code) and beautiful fetch script (exclusively for Arch Linux).
 
