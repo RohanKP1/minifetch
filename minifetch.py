@@ -5,7 +5,7 @@ CRED , CEND , CBLU , CGRE , CYAN = '\033[91m' , '\033[0m' , '\033[94m' , '\033[9
 bslash="\\"
 uptime=os.popen('uptime -p').read()[:-1].split("up")[1]
 mem=subprocess.check_output("free -h",shell=True,text=True).split("\n")[1].split(" ")
-pkgs=subprocess.check_output('yay -Q | wc -l',shell=True,text=True)
+pkgs=subprocess.check_output('pacman -Q | wc -l',shell=True,text=True)
 subprocess.run(["echo",f"""                    {CYAN+"╭────────────"+CEND}
          {CGRE+"/"+bslash+CEND}         {CYAN+"│"+CEND} {CBLU+"OS"+CEND}› Arch Linux
         {CGRE+"/  "+bslash+CEND}        {CYAN+"│"+CEND} {CBLU+"Kernel"+CEND}› {platform.release()}
