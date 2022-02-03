@@ -23,7 +23,8 @@ Thank You.
 **How to Install:**
 <br />
 * use these commands in terminal:
-<br />`git clone https://github.com/RohanKP1/minifetch.git`
-<br />`cd minifetch/`
-<br />`sh install.sh`
-
+```shell
+git clone https://github.com/RohanKP1/minifetch.git
+cd minifetch/
+sudo mv minifetch /usr/bin/ && chmod +x /usr/bin/minifetch
+```
