@@ -20,9 +20,8 @@ Thank You.
 
 -----------------------------------------------------------------------------------------
 
-**How to Install:**
-<br />
-* use these commands in terminal:
+### Installation
+use these commands in terminal :
 ```shell
 git clone https://github.com/RohanKP1/minifetch.git
 cd minifetch/
