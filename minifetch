@@ -2,8 +2,7 @@
 import subprocess
 import platform
 import os
-CRED , CEND , CBLU , CGRE , CYAN = '\033[91m' , '\033[0m' , '\033[94m' , '\033[92m' , '\033[96m'
-bslash="\\"
+CRED , CEND , CBLU , CGRE , CYAN , bslash = '\033[91m' , '\033[0m' , '\033[94m' , '\033[92m' , '\033[96m' , '\\'
 uptime=os.popen('uptime -p').read()[:-1].split("up")[1]
 mem=subprocess.check_output("free -h",shell=True,text=True).split("\n")[1].split(" ")
 pkgs=subprocess.check_output('pacman -Q | wc -l',shell=True,text=True)
